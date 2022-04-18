@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('run_randoop/', rr_views.home),
     path('execute-randoop', include('run_randoop.urls')),
+    path('', include('authentication.urls')),
 ]
