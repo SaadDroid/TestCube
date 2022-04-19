@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-    <form action="/execute-randoop" method="POST">
+    <form class="form-control" action="/execute-randoop" method="POST">
         {% csrf_token %}
         <label for="j_code">Source Code:</label><br>
-        <input type="text" id="j_code" name="j_code" required><br>
+        <textarea id="j_code" name="j_code" required></textarea><br>
         <label for="e_behavior">Expected Behavior:</label><br>
-        <input type="text" id="e_behavior" name="e_behavior"><br>
+        <textarea id="e_behavior" name="e_behavior"></textarea><br>
         <input type="submit"  value="upload">
     </form>
 </body>
