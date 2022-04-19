@@ -1,4 +1,4 @@
-from os import system
+from os import system, getcwd
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.http import HttpResponse
@@ -21,8 +21,12 @@ def run_rand(request):
             e_file.write(e_behavior)
             e_file.close()
             
-        rand_dir = 'G:\\Downloads\\randoop-4.3.0\\randoop\\randoop-all-4.3.0.jar'
-        j_dir = 'G:\\Study\\5th Sem\SPL\\run_randoop\\'
+        # rand_dir = 'G:\\Downloads\\randoop-4.3.0\\randoop\\randoop-all-4.3.0.jar'
+        # print(getcwd())
+        rand_dir = str(getcwd())+'\\'+'randoop\\randoop-all-4.3.0.jar'
+        # j_dir = 'G:\\Study\\5th Sem\SPL\\run_randoop\\'
+        
+        j_dir = str(getcwd())+''
         compile_command = 'javac \"'+j_dir+'\TestClass1.java\"'
         system(compile_command)
         rand_command = 'java -cp \"'+j_dir+';'+rand_dir+'\" randoop.main.Main gentests --testclass=\"TestClass1\"'
@@ -30,4 +34,4 @@ def run_rand(request):
     if p==0:
         return HttpResponse('Randoop generated test cases')
     else:
-        return HttpResponse('Something went wrong')
+        return HttpResponse(rand_dir)
