@@ -3,15 +3,160 @@
 
 <head>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body{
+  
+            margin: 0;
+
+            padding: 0;
+
+            font-family: sans-serif;
+
+            background: #191919;
+
+        }
+
+        .box{
+
+            width: 100%;
+
+            height: 100%;
+
+            /* padding: 40px; */
+
+            position: absolute;
+
+            top: 50%;
+
+            left: 50%;
+
+            transform: translate(-50%,-50%);
+
+            background: #191919;
+
+            text-align: center;
+
+        }
+
+        .box h1{
+
+            color: white;
+
+            text-transform: uppercase;
+
+            font-weight: 500;
+
+        }
+
+        .box textarea{
+
+            border:0;
+  
+            background: none;
+  
+            display: block;
+  
+            margin: 20px auto;
+  
+            text-align: left;
+  
+            border: 2px solid #3498db;
+  
+            padding: 14px 10px;
+  
+            width: 85%;
+
+            height: 500px;
+  
+            outline: none;
+  
+            color: white;
+  
+            border-radius: 10px;
+  
+            transition: 0.25s;
+
+        }
+        .box textarea:focus{
+            border-color: #2ecc71;
+            /* background: white; */
+        }
+        .box table{
+            /* position: absolute; */
+
+            width: 100%;
+        }
+        
+        .left_td{
+
+            position: relative;
+
+            color: white;
+
+            text-align: left;
+        }
+
+        .box input[type = "submit"]{
+  
+            border:0;
+
+            background: #2ecc71;
+
+            display: block;
+
+            margin: 20px auto;
+
+            text-align: center;
+
+            border: 2px solid #2ecc71;
+
+            padding: 14px 40px;
+
+            outline: none;
+
+            color: white;
+
+            border-radius: 24px;
+
+            transition: 0.25s;
+
+            cursor: pointer;
+
+            font-size: 20;
+
+        }
+
+        .box input[type = "submit"]:hover{
+
+            background: none;
+
+        }
+
+    </style>
 </head>
 <body>
-    <form class="form-control" action="/execute-randoop" method="POST">
+    <form class="box" action="/execute-randoop" method="POST">
         {% csrf_token %}
-        <label for="j_code">Source Code:</label><br>
-        <textarea id="j_code" name="j_code" required></textarea><br>
-        <label for="e_behavior">Expected Behavior:</label><br>
-        <textarea id="e_behavior" name="e_behavior"></textarea><br>
-        <input type="submit"  value="upload">
+        <h1>Test Your Code</h1>
+        <table>
+            <tr>
+                <td class="left_td">Source Code:</td>
+                <td class="left_td">Expected Behaviour:</td>
+            </tr>
+            <tr>
+                <td><textarea id="j_code" name="j_code" required></textarea></td>
+                <td><textarea id="e_behavior" name="e_behavior"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="upload"></td>
+            </tr>
+        </table>
+        <br>
+        <!-- <label for="j_code">Source Code:</label><br> -->
+        <!-- <textarea id="j_code" name="j_code" style="float: right; padding: 20px;" required></textarea><br> -->
+        <!-- <label for="e_behavior">Expected Behavior:</label><br> -->
+        <!-- <textarea id="e_behavior" name="e_behavior" style="float: left; padding: 20px;"></textarea><br> -->
+        
     </form>
 </body>
 </html>
