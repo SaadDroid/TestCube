@@ -76,7 +76,9 @@
   
             transition: 0.25s;
 
+            font-size: 18px;
         }
+        
         .box textarea:focus{
             border-color: #2ecc71;
             /* background: white; */
@@ -132,31 +134,115 @@
 
         }
 
+        /* The side navigation menu */
+        .sidenav {
+            height: 100%; /* 100% Full-height */
+            width: 0; /* 0 width - change this with JavaScript */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Stay on top */
+            top: 0; /* Stay at the top */
+            left: 0;
+            background-color: #111; /* Black*/
+            overflow-x: hidden; /* Disable horizontal scroll */
+            padding-top: 60px; /* Place content 60px from the top */
+            transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+        }
+    
+    /* The navigation menu links */
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        
+        /* When you mouse over the navigation links, change their color */
+        .sidenav a:hover {
+            color: #2ecc71;
+        }
+        
+        /* Position and style the close button (top right corner) */
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        
+        /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+        #main {
+            transition: margin-left .5s;
+            padding: 20px;
+        }
+        
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+        }
+
     </style>
+
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
 </head>
 <body>
-    <form class="box" action="/execute-randoop" method="POST">
-        {% csrf_token %}
-        <h1>Test Your Code</h1>
-        <table>
-            <tr>
-                <td class="left_td">Source Code:</td>
-                <td class="left_td">Expected Behaviour:</td>
-            </tr>
-            <tr>
-                <td><textarea id="j_code" name="j_code" required></textarea></td>
-                <td><textarea id="e_behavior" name="e_behavior"></textarea></td>
-            </tr>
-            <tr>
-                <td colspan="2"><input type="submit" value="upload"></td>
-            </tr>
-        </table>
-        <br>
-        <!-- <label for="j_code">Source Code:</label><br> -->
-        <!-- <textarea id="j_code" name="j_code" style="float: right; padding: 20px;" required></textarea><br> -->
-        <!-- <label for="e_behavior">Expected Behavior:</label><br> -->
-        <!-- <textarea id="e_behavior" name="e_behavior" style="float: left; padding: 20px;"></textarea><br> -->
-        
-    </form>
+    
+    <div class="box">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="/login">Logout</a>
+        </div>
+      
+        <!-- Use any element to open the sidenav -->
+        <span onclick="openNav()">
+            <i class="material-icons" style="font-size:48px;color:#2ecc71; position: absolute; left: 5px; top: 5px">menu</i>
+            <!-- <img src="..\static\imgs\navbar_icon.png" alt="drawer" style="width: 100px; height: 100px; position: absolute; left: -5px; top: 0px;"> -->
+        </span>
+        <form action="/execute-randoop" method="POST">
+            
+            {% csrf_token %}
+            <h1>Test Your Code</h1>
+            <table>
+                <tr>
+                    <td class="left_td">Source Code:</td>
+                    <td class="left_td">Expected Behaviour:</td>
+                </tr>
+                <tr>
+                    <td><textarea id="j_code" name="j_code" required></textarea></td>
+                    <td><textarea id="e_behavior" name="e_behavior"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="upload"></td>
+                </tr>
+            </table>
+            <br>
+            <!-- <label for="j_code">Source Code:</label><br> -->
+            <!-- <textarea id="j_code" name="j_code" style="float: right; padding: 20px;" required></textarea><br> -->
+            <!-- <label for="e_behavior">Expected Behavior:</label><br> -->
+            <!-- <textarea id="e_behavior" name="e_behavior" style="float: left; padding: 20px;"></textarea><br> -->
+            
+        </form>
+    </div>
 </body>
 </html>
