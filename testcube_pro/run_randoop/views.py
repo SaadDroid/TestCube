@@ -1,12 +1,20 @@
 from os import system, getcwd
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+# @login_required
 def home(request):
-    return render(request, 'randoopInput.html')
+    if request.user.is_authenticated:
+        print(request.user.id)
+        return render(request, 'randoopInput.html')
+    else:
+        print('error')
+        return redirect('login')
 
+# @login_required
 def run_rand(request):
     if request.method == "POST":
         # public class TestClass1 { 	public int add(int a, int b) 	{ 		int x= a+b; 		return x/0; 	} }
@@ -33,7 +41,9 @@ def run_rand(request):
         j_dir = str(getcwd())+''
         compile_command = 'javac \"'+j_dir+'\\'+className+'.java\"'
         system(compile_command)
+        # java -cp 'G:\Study\5th Sem\SPL\run_randoop\';'G:\Downloads\randoop-4.3.0\randoop\randoop-all-4.3.0.jar randoop.main.Main gentests --testclass=Adder'
         rand_command = 'java -cp \"'+j_dir+';'+rand_dir+'\" randoop.main.Main gentests --testclass=\"'+className+'\"'
+        # print(rand_command)
         p = system(rand_command)
     if p==0:
         return HttpResponse('Randoop generated test cases')

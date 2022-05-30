@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate
-from django.contrib.auth import login, logout as _login
+from django.contrib.auth import login as _login
 from django.contrib.auth import logout as _logout
 
 # Create your views here.
@@ -32,6 +32,8 @@ def signup(request):
 
 
 def login(request):
+    if request.user.is_authenticated:
+        return redirect('run_randoop/')
     if request.method == "POST":
         username = request.POST['username']
         password = request.POST['pass1']
@@ -39,17 +41,17 @@ def login(request):
         user = authenticate(username=username, password=password)
 
         if user is not None:
-            _login(request)
+            _login(request, user)
             firstname = user.first_name
             return redirect('run_randoop/')
             # return render(request, "index.html", {'firstname': firstname})
         
         else:
             messages.error(request, "Username/Password incorrect")
-            return redirect('home')
+            return redirect('login')
     return render(request, "login.html")
 
 def logout(request):
     _logout(request)
-    message.success(request, "Logged out Successfully")
-    return redirect('home')
+    messages.error(request, 'Successfully logged out')
+    return redirect('login')
