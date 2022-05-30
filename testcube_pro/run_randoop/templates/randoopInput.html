@@ -78,7 +78,7 @@
 
             font-size: 18px;
         }
-        
+
         .box textarea:focus{
             border-color: #2ecc71;
             /* background: white; */
@@ -171,6 +171,8 @@
             font-size: 36px;
             margin-left: 50px;
         }
+
+        
         
         /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
         #main {
@@ -184,6 +186,132 @@
             .sidenav a {font-size: 18px;}
         }
 
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input { 
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            background-color: #2ecc71;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2ecc71;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+        h6{
+            display: inline;
+            font-size: 15px;
+            font-weight: 200;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            cursor: pointer;
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .show {
+            display: block;
+        }
     </style>
 
     <script>
@@ -195,6 +323,19 @@
         /* Set the width of the side navigation to 0 */
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
+        }
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(e) {
+            if (!e.target.matches('.dropbtn')) {
+                var myDropdown = document.getElementById("myDropdown");
+                    if (myDropdown.classList.contains('show')) {
+                        myDropdown.classList.remove('show');
+                    }
+                }
         }
     </script>
 
@@ -216,7 +357,7 @@
       
         <!-- Use any element to open the sidenav -->
         <span onclick="openNav()">
-            <i class="material-icons" style="font-size:48px;color:#2ecc71; position: absolute; left: 5px; top: 5px">menu</i>
+            <i class="material-icons" style="font-size:48px;color:#2ecc71; position: absolute; left: 5px; top: 5px;">menu</i>
             <!-- <img src="..\static\imgs\navbar_icon.png" alt="drawer" style="width: 100px; height: 100px; position: absolute; left: -5px; top: 0px;"> -->
         </span>
         <form action="/execute-randoop" method="POST">
@@ -231,6 +372,24 @@
                 <tr>
                     <td><textarea id="j_code" name="j_code" required></textarea></td>
                     <td><textarea id="e_behavior" name="e_behavior"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="font-size: 15px; color: #818181;">
+                        <h6 style="position: relative; top: 8px">Try our machine learning based solution?</h6>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="font-size: 15px; color: #818181;">
+                        <h6 style="position: relative; top: 8px">Turn off auto execution</h6>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </td>
                 </tr>
                 <tr>
                     <td colspan="2"><input type="submit" value="upload"></td>
