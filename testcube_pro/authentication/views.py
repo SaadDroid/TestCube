@@ -21,13 +21,15 @@ def signup(request):
         email = request.POST['email']
         pass1 = request.POST['pass1']
         pass2 = request.POST['pass2']
-
-        myuser = User.objects.create_user(username, email, pass1)
-        myuser.first_name = firstname
-        myuser.last_name = lastname
-        myuser.save()
-        messages.success(request, "Your Account has been created successfully.")
-        return redirect('login')
+        if pass1 == pass2:
+            myuser = User.objects.create_user(username, email, pass1)
+            myuser.first_name = firstname
+            myuser.last_name = lastname
+            myuser.save()
+            messages.success(request, "Your Account has been created successfully.")
+            return redirect('login')
+        else:
+            messages.error(request,'passwords did not match')
     return render(request, "signup_1.html")
 
 
@@ -53,5 +55,5 @@ def login(request):
 
 def logout(request):
     _logout(request)
-    messages.error(request, 'Successfully logged out')
+    messages.success(request, 'Successfully logged out')
     return redirect('login')
