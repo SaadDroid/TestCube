@@ -153,8 +153,8 @@
         }
     
     /* The navigation menu links */
-        .sidenav a {
-            padding: 8px 8px 8px 32px;
+        .sidenav a, .sidenav h4{
+            padding: 10px 8px 8px 32px;
             text-decoration: none;
             font-size: 25px;
             color: #818181;
@@ -279,9 +279,16 @@
     <div class="box">
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">About</a>
+            <h4 style="display: inline;">Welcome</h6>
+            <h4 style="color:#2ecc71; display:unset;">{{ request.user.username }}</h6>
+            <svg height="30" width="500">
+                <line x1="15" y1="10" x2="235" y2="10" style="stroke:#545252a0;stroke-width:2" />
+            </svg>
+            <a href="#" style="padding: 15px 8px 8px 32px;">About</a>
             <a href="#">Services</a>
             <a href="#">Clients</a>
+            <svg height="50%" width="500px">
+            </svg>
             <a href="/logout">Logout</a>
         </div>
       
@@ -309,14 +316,14 @@
                     <td style="font-size: 15px; color: #818181;">
                         <h6 style="position: relative; top: 8px">Try our machine learning based solution?</h6>
                         <label class="switch">
-                            <input type="checkbox">
+                            <input type="checkbox" id="ml_choice" name="ml_choice">
                             <span class="slider round"></span>
                         </label>
                     </td>
                     <td style="font-size: 15px; color: #818181;">
                         <h6 style="position: relative; top: 8px">Turn off auto execution</h6>
                         <label class="switch">
-                            <input type="checkbox">
+                            <input type="checkbox" id="ex_choice" name="ex_choice">
                             <span class="slider round"></span>
                         </label>
                     </td>

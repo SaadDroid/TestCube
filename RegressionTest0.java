@@ -2,13 +2,6 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-class TestClass1 {
-    public int add(int a, int b) {
-        int x = a + b;
-        return x / 0;
-    }
-}
-
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class RegressionTest0 {
 
@@ -1375,4 +1368,19 @@ public class RegressionTest0 {
             // Expected exception.
         }
     }
+
+    @Test
+    public void test99() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test99");
+        TestClass1 testClass1_0 = new TestClass1();
+        // The following exception was thrown during execution in test generation
+        try {
+            int int3 = testClass1_0.add((int) (byte) -1, (int) (short) 10);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: / by zero");
+        } catch (java.lang.ArithmeticException e) {
+            // Expected exception.
+        }
+    }
 }
+

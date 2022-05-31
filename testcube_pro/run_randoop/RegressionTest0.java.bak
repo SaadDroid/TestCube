@@ -2,13 +2,6 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-class TestClass1 {
-    public int add(int a, int b) {
-        int x = a + b;
-        return x / 0;
-    }
-}
-
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class RegressionTest0 {
 
@@ -1376,3 +1369,4 @@ public class RegressionTest0 {
         }
     }
 }
+
