@@ -50,7 +50,7 @@
 
             border:0;
   
-            background: #f5f7e7;
+            background: #3e3e3e;
   
             display: block;
   
@@ -67,8 +67,6 @@
             height: 500px;
   
             outline: none;
-  
-            color: black;
 
             font-weight: 500;
   
@@ -76,7 +74,11 @@
   
             transition: 0.25s;
 
-            font-size: 18px;
+            font-size: 15px;
+
+            color: white;
+
+            /* box-sizing: content-box; */
         }
 
         .box textarea:focus{
@@ -96,6 +98,8 @@
             color: white;
 
             text-align: left;
+
+            padding-left: 3%;
         }
 
         .box input[type = "submit"]{
@@ -283,6 +287,62 @@
             color: #2ecc71;
         }
 
+        .no_bg {
+            background: none;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            /* padding-left: 73%; */
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 140px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 150%;
+            left: 50%;
+            margin-left: -75px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .colored_i {
+            position:relative;
+            left: 10px;
+            background: none;
+        }
+
+        .colored_i i {
+            color:#818181
+        }
+
+        .colored_i i:hover{
+            color: #2ecc71;
+        }
 
     </style>
 
@@ -296,8 +356,63 @@
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
         }
+
+        function myFunction1() {
+            var copyText = document.getElementById("ta1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+            
+            var tooltip = document.getElementById("myTooltip1");
+            tooltip.innerHTML = "Copied";
+        }
+        function myFunction2() {
+            var copyText = document.getElementById("ta2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+            
+            var tooltip = document.getElementById("myTooltip2");
+            tooltip.innerHTML = "Copied";
+        }
+        function myFunction3() {
+            var copyText = document.getElementById("ta3");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+            
+            var tooltip = document.getElementById("myTooltip3");
+            tooltip.innerHTML = "Copied";
+        }
+        function myFunction4() {
+            var copyText = document.getElementById("ta4");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+            
+            var tooltip = document.getElementById("myTooltip4");
+            tooltip.innerHTML = "Copied";
+        }
+
+        function outFunc1() {
+            var tooltip = document.getElementById("myTooltip1");
+            tooltip.innerHTML = "Copy to clipboard";
+        }
+        function outFunc2() {
+            var tooltip = document.getElementById("myTooltip2");
+            tooltip.innerHTML = "Copy to clipboard";
+        }
+        function outFunc3() {
+            var tooltip = document.getElementById("myTooltip3");
+            tooltip.innerHTML = "Copy to clipboard";
+        }
+        function outFunc4() {
+            var tooltip = document.getElementById("myTooltip4");
+            tooltip.innerHTML = "Copy to clipboard";
+        }
     </script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -334,27 +449,63 @@
         <svg height="5%" width="500px">
         </svg>
         <div style="padding-bottom: 50px;">
-            <h1 style="color: #2ecc71; display: inline;">{{ request.user.username }}</h1>
-            <h1 style="display: unset;">'s previous usage</h1>
+            <h1 style="color: #2ecc71; display: inline; padding-bottom: 0px;">{{ request.user.username }}</h1>
+            <h1 style="display: unset; padding-bottom: 0px;">'s usage in</h1>
+            <h1 style="color: #818181; padding-top: 0px;">{{ usage_data.date_time }}</h1>
         </div>
 
-        <table style="width: 70%;margin-left:auto;margin-right:auto; text-align: left;font-size: 20px;">
+        <table>
             <tr>
-                <th class="profile" style="color:#3498db;">usage time</th>
-                <th class="profile" style="color:#3498db;">used tool</th>
+                <td class="left_td">
+                    Source Code
+                    <div class="tooltip">
+                        <button class="colored_i" onclick="myFunction1()" onmouseout="outFunc1()">
+                            <span class="tooltiptext" id="myTooltip1">Copy to clipboard</span>
+                            <i class="fa fa-copy" style="padding-left: 5px;font-size:20px;"></i>
+                        </button>
+                    </div>
+                </td>
+                <td class="left_td">
+                    Test Code
+                    <div class="tooltip">
+                        <button class="colored_i" onclick="myFunction2()" onmouseout="outFunc2()">
+                            <span class="tooltiptext" id="myTooltip2">Copy to clipboard</span>
+                            <i class="fa fa-copy" style="padding-left: 5px;font-size:20px;"></i>
+                        </button>
+                    </div>
+                </td>
             </tr>
-            
-            {% for code in user_codes %}
+            <tr >
+                <td><textarea id="ta1" readonly>{{ usage_data.source_code }}</textarea></td>
+                <td><textarea id="ta2" readonly>{{ usage_data.test_code }}</textarea></td>
+            </tr>
+
             <tr>
-                <td class="profile">
-                    <a href="{{code.id}}">{{ code.date_time }}</a>
+                <td class="left_td">
+                    Report
+                    <div class="tooltip">
+                        <button class="colored_i" onclick="myFunction3()" onmouseout="outFunc3()">
+                            <span class="tooltiptext" id="myTooltip3">Copy to clipboard</span>
+                            <i class="fa fa-copy" style="padding-left: 5px;font-size:20px;"></i>
+                        </button>
+                    </div>
                 </td>
-                <td class="profile">
-                    {{ code.used_tool }}
+                <td class="left_td">
+                    Expected Behavior
+                    <div class="tooltip">
+                        <button class="colored_i" onclick="myFunction4()" onmouseout="outFunc4()">
+                            <span class="tooltiptext" id="myTooltip4">Copy to clipboard</span>
+                            <i class="fa fa-copy" style="padding-left: 5px;font-size:20px;"></i>
+                        </button>
+                    </div>
                 </td>
             </tr>
-            {% endfor %}
+            <tr>
+                <td><textarea id="ta3" readonly>{{ usage_data.report }}</textarea></td>
+                <td><textarea id="ta4" readonly>{{ usage_data.expected_behavior }}</textarea></td>
+            </tr>
         </table>
+        
     </div>
 </body>
 </html>

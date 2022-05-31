@@ -70,3 +70,12 @@ def viewHistory(request):
         "user_codes": cur_user.user_codes_set.all(),
     }
     return render(request, 'usage.html', code_dc)
+
+
+def viewSpecificUsage(request, id):
+    cur_user = User.objects.get(name=request.user.username)
+    usage_data = cur_user.user_codes_set.get(id=id)
+    code_dc = {
+        "usage_data": cur_user.user_codes_set.get(id=id)
+    }
+    return render(request, 'specific_usage.html', code_dc)

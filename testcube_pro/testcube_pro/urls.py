@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('run_randoop/', rr_views.home),
     path('run_randoop/previous/', rr_views.viewHistory),
+    path('run_randoop/previous/<int:id>', rr_views.viewSpecificUsage, name="index"),
     path('execute-randoop', include('run_randoop.urls')),
     path('', include('authentication.urls')),
 ]
