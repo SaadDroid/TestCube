@@ -4,12 +4,13 @@ from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
+from .models import*
 
 # Create your views here.
 # @login_required
 def home(request):
     if request.user.is_authenticated:
-        print(request.user.id)
+        # print(request.user.id)
         return render(request, 'randoopInput.html')
     else:
         messages.error(request, 'Please login first')
@@ -17,6 +18,7 @@ def home(request):
 
 # @login_required
 def run_rand(request):
+    p = -1
     if request.method == "POST":
         # public class TestClass1 { 	public int add(int a, int b) 	{ 		int x= a+b; 		return x/0; 	} }
         j_code = request.POST['j_code']
@@ -59,3 +61,12 @@ def run_rand(request):
         return HttpResponse('Randoop generated test cases')
     else:
         return HttpResponse('Something went wrong')
+
+
+def viewHistory(request):
+    cur_user = User.objects.get(name=request.user.username)
+    # user_codes = cur_user.user_codes_set.all()
+    code_dc = {
+        "user_codes": cur_user.user_codes_set.all(),
+    }
+    return render(request, 'usage.html', code_dc)

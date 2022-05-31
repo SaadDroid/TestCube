@@ -20,6 +20,7 @@ from run_randoop import views as rr_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('run_randoop/', rr_views.home),
+    path('run_randoop/previous/', rr_views.viewHistory),
     path('execute-randoop', include('run_randoop.urls')),
     path('', include('authentication.urls')),
 ]
