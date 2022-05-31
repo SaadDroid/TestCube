@@ -51,7 +51,7 @@ def run_rand(request):
         compile_command = 'javac \"'+j_dir+'\\'+className+'.java\"'
         system(compile_command)
         num_tests = '100'
-        # java -cp 'G:\Study\5th Sem\SPL\run_randoop\';'G:\Downloads\randoop-4.3.0\randoop\randoop-all-4.3.0.jar' randoop.main.Main gentests --testclass=Adder --output-limit=100
+        # java -cp "G:\Study\5th Sem\SPL\run_randoop\;G:\Downloads\randoop-4.3.0\randoop\randoop-all-4.3.0.jar" randoop.main.Main gentests --testclass="Adder" --output-limit=100
         rand_command = 'java -cp \"'+j_dir+';'+rand_dir+'\" randoop.main.Main gentests --testclass=\"'+className+'\"'+' --output-limit='+num_tests
         # print(rand_command)
         p = system(rand_command)
