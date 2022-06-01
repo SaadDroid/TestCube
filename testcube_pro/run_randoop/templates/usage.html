@@ -338,15 +338,19 @@
             <h1 style="display: unset;">'s previous usage</h1>
         </div>
 
-        <table style="width: 70%;margin-left:auto;margin-right:auto; text-align: left;font-size: 20px;">
+        <table style="width: 70%;margin-left:auto;margin-right:auto; text-align: left;">
             <tr>
+                <th class="profile" style="color:#3498db;width: 30%;">class name</th>
                 <th class="profile" style="color:#3498db;">usage time</th>
                 <th class="profile" style="color:#3498db;">used tool</th>
             </tr>
             
             {% for code in user_codes %}
             <tr>
-                <td class="profile">
+                <td class="profile" style="width: 30%;">
+                    <a href="{{code.id}}">{{ code.class_name }}</a>
+                </td>
+                <td class="profile" style="padding-right: 0px;">
                     <a href="{{code.id}}">{{ code.date_time }}</a>
                 </td>
                 <td class="profile">

@@ -11,6 +11,7 @@ class User(models.Model):
 
 class User_Codes(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    class_name = models.CharField(max_length=50, null=True)
     source_code = models.TextField()
     test_code = models.TextField()
     expected_behavior = models.TextField()
@@ -19,5 +20,5 @@ class User_Codes(models.Model):
     used_tool = models.CharField(max_length=10, null=True)
 
     def __str__(self):
-        return self.report
+        return str(self.date_time)+' '+self.class_name
     
