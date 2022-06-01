@@ -24,7 +24,7 @@ def run_rand(request):
         j_code = request.POST['j_code']
         className = j_code[j_code.find('class ')+len('class '):j_code.find('{')]
         className = className.strip()
-        j_code = '// ' + className + '\n' + j_code
+        j_code = '// ' + className + '.java\n' + j_code
         # print(className)
         e_behavior = request.POST['e_behavior']
 
