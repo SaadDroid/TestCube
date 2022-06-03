@@ -55,8 +55,8 @@ def run_rand(request):
         system(compile_command)
         num_tests = '100'
         # G:\Study\5th Sem\SPL\TestCube\testcube_pro\Fib.class
-        # java -cp "G:\Study\5th Sem\SPL\TestCube\testcube_pro\;G:\Downloads\randoop-4.3.0\randoop\randoop-all-4.3.0.jar" randoop.main.Main gentests --testclass="Fib"
-        rand_command = 'java -cp \"'+j_dir+';'+rand_dir+'\" randoop.main.Main gentests --testclass=\"'+className+'\"'+' --regression-test-basename='+'\"'+className+'Tester\" --time-limit=20'
+        # java -cp "G:\Study\5th Sem\SPL\TestCube\testcube_pro\;G:\Downloads\randoop-4.3.0\randoop\randoop-all-4.3.0.jar" randoop.main.Main gentests --testclass="adder" --unchecked-exception="error" 
+        rand_command = 'java -cp "'+j_dir+';'+rand_dir+'" randoop.main.Main gentests --testclass="'+className+'"'+' --regression-test-basename='+'"'+className+'Tester" --time-limit=20 --unchecked-exception="error"'
         # print(rand_command)
         p = system(rand_command)
 

@@ -11,8 +11,8 @@ public class RegressionTest0 {
     public void test1() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test1");
-        Fib fib0 = new Fib();
-        java.lang.Class<?> wildcardClass1 = fib0.getClass();
+        adder adder0 = new adder();
+        java.lang.Class<?> wildcardClass1 = adder0.getClass();
         org.junit.Assert.assertNotNull(wildcardClass1);
     }
 

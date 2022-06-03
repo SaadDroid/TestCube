@@ -1,3 +1,0 @@
-piash{
-int p;
-}
