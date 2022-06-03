@@ -301,60 +301,12 @@
             <i class="material-icons" style="font-size:48px;color:#2ecc71; position: absolute; left: 5px; top: 5px;">menu</i>
             <!-- <img src="..\static\imgs\navbar_icon.png" alt="drawer" style="width: 100px; height: 100px; position: absolute; left: -5px; top: 0px;"> -->
         </span>
-        <form action="/execute-randoop" method="POST">
-            
-            {% csrf_token %}
-            <a href="../" style="font-size: 25px; text-decoration: none;">
-                <h1 style="color: #2ecc71; display: inline;">Test</h1>
-                <h1 style="display: unset;">Cube</h1>
-            </a>
-            {% for message in messages %}
-            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-                <strong style="color: red; font-weight: 500; position: relative;top: 15px; padding-bottom: 20px;">{{ message }}</strong>
-            </div>
-            {% endfor %}
-            <h1>Test Your Code</h1>
-            <table>
-                <tr>
-                    <td class="left_td">Source Code:</td>
-                    <td class="left_td">Expected Behaviour:</td>
-                </tr>
-                <tr>
-                    <td><textarea id="j_code" name="j_code" required oninvalid="this.setCustomValidity('Please input java source code here')" ></textarea></td>
-                    <td><textarea id="e_behavior" name="e_behavior"></textarea></td>
-                </tr>
-            </table>
-            <table style="width: 60%;margin-left:auto;margin-right:auto; text-align: left;">
-                <tr>
-                    <td style="font-size: 15px; color: #818181;">
-                        <h6 style="position: relative; top: 8px">Try our machine learning based solution?</h6>
-                        <label class="switch">
-                            <input type="checkbox" id="ml_choice" name="ml_choice">
-                            <span class="slider round"></span>
-                        </label>
-                    </td>
-                    <td style="font-size: 15px; color: #818181;">
-                        <h6 style="position: relative; top: 8px">Turn off auto execution</h6>
-                        <label class="switch">
-                            <input type="checkbox" id="ex_choice" name="ex_choice">
-                            <span class="slider round"></span>
-                        </label>
-                    </td>
-                </tr>
-            </table>
-            <br>
-            <table>
-                <tr>
-                    <td ><input type="submit" value="upload"></td>
-                </tr>
-            </table>
-            <br>
-            <!-- <label for="j_code">Source Code:</label><br> -->
-            <!-- <textarea id="j_code" name="j_code" style="float: right; padding: 20px;" required></textarea><br> -->
-            <!-- <label for="e_behavior">Expected Behavior:</label><br> -->
-            <!-- <textarea id="e_behavior" name="e_behavior" style="float: left; padding: 20px;"></textarea><br> -->
-            
-        </form>
+        {% csrf_token %}
+        <a href="../" style="font-size: 25px; text-decoration: none;">
+            <h1 style="color: #2ecc71; display: inline;">Test</h1>
+            <h1 style="display: unset;">Cube</h1>
+        </a>
+        <h1 style="color: red; font-size: 15px">Something went wrong</h1>
     </div>
 </body>
 </html>

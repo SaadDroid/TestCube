@@ -52,7 +52,12 @@ def run_rand(request):
         
         j_dir = str(getcwd())+''
         compile_command = 'javac \"'+j_dir+'\\'+className+'.java\"'
-        system(compile_command)
+        compile_status = system(compile_command)
+
+        if compile_status != 0:
+            messages.error(request, 'Compilation error occured. Please enter valid java source code')
+            return redirect('run_randoop/')
+
         num_tests = '100'
         # G:\Study\5th Sem\SPL\TestCube\testcube_pro\Fib.class
         # java -cp "G:\Study\5th Sem\SPL\TestCube\testcube_pro\;G:\Downloads\randoop-4.3.0\randoop\randoop-all-4.3.0.jar" randoop.main.Main gentests --testclass="adder" --unchecked-exception="error" 
@@ -80,7 +85,8 @@ def run_rand(request):
         return render(request, 'specific_usage.html', code_dc)
         # return HttpResponse('Randoop generated test cases')
     else:
-        return HttpResponse('Something went wrong')
+        messages.error(request, 'Something went wrong while executing randoop')
+        return redirect('run_randoop/')
 
 
 def viewHistory(request):
