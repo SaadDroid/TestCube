@@ -54,8 +54,9 @@ def run_rand(request):
         compile_command = 'javac \"'+j_dir+'\\'+className+'.java\"'
         system(compile_command)
         num_tests = '100'
-        # java -cp "G:\Study\5th Sem\SPL\run_randoop\;G:\Downloads\randoop-4.3.0\randoop\randoop-all-4.3.0.jar" randoop.main.Main gentests --testclass="Adder" --output-limit=100
-        rand_command = 'java -cp \"'+j_dir+';'+rand_dir+'\" randoop.main.Main gentests --testclass=\"'+className+'\"'+' --output-limit='+num_tests+ ' --regression-test-basename='+'\"'+className+'Tester\" --time-limit=5'
+        # G:\Study\5th Sem\SPL\TestCube\testcube_pro\Fib.class
+        # java -cp "G:\Study\5th Sem\SPL\TestCube\testcube_pro\;G:\Downloads\randoop-4.3.0\randoop\randoop-all-4.3.0.jar" randoop.main.Main gentests --testclass="Fib"
+        rand_command = 'java -cp \"'+j_dir+';'+rand_dir+'\" randoop.main.Main gentests --testclass=\"'+className+'\"'+' --regression-test-basename='+'\"'+className+'Tester\" --time-limit=20'
         # print(rand_command)
         p = system(rand_command)
 

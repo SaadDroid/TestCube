@@ -1,4 +1,4 @@
-// TestClass1
+// TestClass1.java
 public class TestClass1 {
  	public int add(int a, int b)
  	{
