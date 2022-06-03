@@ -55,6 +55,7 @@ def run_rand(request):
         compile_status = system(compile_command)
 
         if compile_status != 0:
+            system('del '+ className+ '.java')
             messages.error(request, 'Compilation error occured. Please enter valid java source code')
             return redirect('run_randoop/')
 
