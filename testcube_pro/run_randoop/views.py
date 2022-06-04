@@ -38,6 +38,12 @@ def run_rand(request):
             j_file = open(src_file, "r")
             j_code = j_file.read()
             j_file.close()
+
+        # elif '/' in src_file:
+            
+        # else:
+        #     messages.error(request, 'An error occured during execution')
+        #     return redirect('run_randoop/')
         # print(className)
         
 
