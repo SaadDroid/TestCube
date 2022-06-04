@@ -53,12 +53,15 @@ def run_rand(request):
         # print(request.POST['ex_choice'])
         ex_file = request.POST['e_file']
         e_behavior = request.POST['e_behavior']
+        ex_filename = ''
         if e_behavior != '':
-            e_file = open("ex_behavior.json", "w+")
+            ex_filename = 'ex_behavior.json'
+            e_file = open(ex_filename, "w+")
             e_file.write(e_behavior)
             e_file.close()
         
         elif ex_file != '':
+            ex_filename = ex_file
             e_file = open(ex_file, 'r')
             e_behavior = e_file.read()
             e_file.close()
@@ -78,10 +81,18 @@ def run_rand(request):
 
         num_tests = '100'
         # G:\Study\5th Sem\SPL\TestCube\testcube_pro\Fib.class
+        # G:\Study\5th Sem\Design\Codes\builderObserver\out\artifacts\builderObserver_jar\builderObserver.jar
+        # java -cp "G:\Study\5th Sem\SPL\TestCube\testcube_pro\observer\observer;G:\Downloads\randoop-4.3.0\randoop\randoop-all-4.3.0.jar" randoop.main.Main gentests --test-package="observer" --unchecked-exception="error" 
+        # G:\Study\5th Sem\SPL\TestCube\testcube_pro\builderObserver.jar
         # java -cp "G:\Study\5th Sem\SPL\TestCube\testcube_pro\;G:\Downloads\randoop-4.3.0\randoop\randoop-all-4.3.0.jar" randoop.main.Main gentests --testclass="adder" --unchecked-exception="error" 
         rand_command = 'java -cp "'+j_dir+';'+rand_dir+'" randoop.main.Main gentests --testclass="'+className+'"'+' --regression-test-basename='+'"'+className+'Tester" --time-limit=20 --unchecked-exception="error"'
         # print(rand_command)
+        if ex_filename != '':
+            rand_command += ' --specifications='+ex_filename
         p = system(rand_command)
+        if p != 0:
+            messages.error(request, 'Something went wrong while executing randoop')
+            return redirect('run_randoop/')
 
         test_file = open(j_dir+'/'+className+'Tester0.java', 'r')
         test_file_dct = test_file.readlines()
@@ -99,6 +110,7 @@ def run_rand(request):
             "usage_data":usage_data,
         }
         
+
     if p==0:
         return render(request, 'specific_usage.html', code_dc)
         # return HttpResponse('Randoop generated test cases')
