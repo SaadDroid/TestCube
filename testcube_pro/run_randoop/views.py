@@ -21,16 +21,27 @@ def run_rand(request):
     p = -1
     if request.method == "POST":
         # public class TestClass1 { 	public int add(int a, int b) 	{ 		int x= a+b; 		return x/0; 	} }
+        src_file = request.POST['j_file']
+        className = src_file
+        className = className[:-5]
+
         j_code = request.POST['j_code']
-        className = j_code[j_code.find('class ')+len('class '):j_code.find('{')]
-        className = className.strip()
-        j_code = '// ' + className + '.java\n' + j_code
+        if j_code != '':
+            className = j_code[j_code.find('class ')+len('class '):j_code.find('{')]
+            className = className.strip()
+            j_code = '// ' + className + '.java\n' + j_code
+            j_file = open(className+".java", "w+")
+            j_file.write(j_code)
+            j_file.close()
+
+        else:
+            j_file = open(src_file, "r")
+            j_code = j_file.read()
+            j_file.close()
         # print(className)
         e_behavior = request.POST['e_behavior']
 
-        j_file = open(className+".java", "w+")
-        j_file.write(j_code)
-        j_file.close()
+        
         ex_choice = ''
         ml_choice = ''
         for i in request.POST:
@@ -40,7 +51,7 @@ def run_rand(request):
                 ml_choice = request.POST[i]
 
         # print(request.POST['ex_choice'])
-        if e_behavior != None:
+        if e_behavior != '':
             e_file = open("ex_behavior.json", "w+")
             e_file.write(e_behavior)
             e_file.close()
