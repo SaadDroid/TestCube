@@ -16,11 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from run_randoop import views as rr_views
+from authentication import views as auth_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('run_randoop/', rr_views.home),
     path('run_randoop/previous/', rr_views.viewHistory),
+    path('profile/', auth_view.viewProfile),
     path('run_randoop/previous/<int:id>', rr_views.viewSpecificUsage, name="index"),
     path('execute-randoop', include('run_randoop.urls')),
     path('', include('authentication.urls')),

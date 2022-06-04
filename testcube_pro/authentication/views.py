@@ -8,6 +8,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as _login
 from django.contrib.auth import logout as _logout
+from django.shortcuts import get_object_or_404
 
 # Create your views here.
 def home(request):
@@ -57,3 +58,8 @@ def logout(request):
     _logout(request)
     messages.success(request, 'Successfully logged out')
     return redirect('login')
+
+
+def viewProfile(request):
+    user = get_object_or_404(User, username=request.user.username)
+    return render(request, 'userProfile.html', {'profile_user':user})
