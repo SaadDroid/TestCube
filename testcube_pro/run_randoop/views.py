@@ -39,7 +39,7 @@ def run_rand(request):
             j_code = j_file.read()
             j_file.close()
         # print(className)
-        e_behavior = request.POST['e_behavior']
+        
 
         
         ex_choice = ''
@@ -51,11 +51,17 @@ def run_rand(request):
                 ml_choice = request.POST[i]
 
         # print(request.POST['ex_choice'])
+        ex_file = request.POST['e_file']
+        e_behavior = request.POST['e_behavior']
         if e_behavior != '':
             e_file = open("ex_behavior.json", "w+")
             e_file.write(e_behavior)
             e_file.close()
-            
+        
+        elif ex_file != '':
+            e_file = open(ex_file, 'r')
+            e_behavior = e_file.read()
+            e_file.close()
         # rand_dir = 'G:\\Downloads\\randoop-4.3.0\\randoop\\randoop-all-4.3.0.jar'
         # print(getcwd())
         rand_dir = str(getcwd())+'\\'+'randoop\\randoop-all-4.3.0.jar'
@@ -88,7 +94,7 @@ def run_rand(request):
         cur_user.user_codes_set.create(class_name = className ,source_code = j_code, test_code=test_file_str, expected_behavior=e_behavior, report='', used_tool='randoop')
         cur_user.save()
 
-        usage_data = cur_user.user_codes_set.get(class_name=className, source_code = j_code)
+        usage_data = cur_user.user_codes_set.get(class_name=className, test_code = test_file_str)
         code_dc = {
             "usage_data":usage_data,
         }

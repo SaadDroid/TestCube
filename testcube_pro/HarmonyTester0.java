@@ -3425,19 +3425,6 @@ public class HarmonyTester0 {
         if (debug)
             System.out.format("%n%s%n", "HarmonyTester0.test192");
         Harmony harmony0 = new Harmony();
-        int int3 = harmony0.pow(1399733633, (int) 'a');
-        int int6 = harmony0.pow((int) (short) -1, 97);
-        int int9 = harmony0.pow((-1917263871), (int) ' ');
-        org.junit.Assert.assertTrue("'" + int3 + "' != '" + (-1401860735) + "'", int3 == (-1401860735));
-        org.junit.Assert.assertTrue("'" + int6 + "' != '" + (-1) + "'", int6 == (-1));
-        org.junit.Assert.assertTrue("'" + int9 + "' != '" + 1998323713 + "'", int9 == 1998323713);
-    }
-
-    @Test
-    public void test193() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test193");
-        Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow((int) (byte) 1, 0);
         int int9 = harmony0.pow((int) (short) 10, 100);
@@ -3449,9 +3436,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test194() throws Throwable {
+    public void test193() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test194");
+            System.out.format("%n%s%n", "HarmonyTester0.test193");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(0, (int) (short) 0);
         int int6 = harmony0.pow(0, 0);
@@ -3466,9 +3453,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test195() throws Throwable {
+    public void test194() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test195");
+            System.out.format("%n%s%n", "HarmonyTester0.test194");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -3491,9 +3478,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test196() throws Throwable {
+    public void test195() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test196");
+            System.out.format("%n%s%n", "HarmonyTester0.test195");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -3512,9 +3499,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test197() throws Throwable {
+    public void test196() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test197");
+            System.out.format("%n%s%n", "HarmonyTester0.test196");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(0, (int) (short) 0);
         int int6 = harmony0.pow(0, 0);
@@ -3531,9 +3518,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test198() throws Throwable {
+    public void test197() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test198");
+            System.out.format("%n%s%n", "HarmonyTester0.test197");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -3554,9 +3541,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test199() throws Throwable {
+    public void test198() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test199");
+            System.out.format("%n%s%n", "HarmonyTester0.test198");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -3577,9 +3564,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test200() throws Throwable {
+    public void test199() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test200");
+            System.out.format("%n%s%n", "HarmonyTester0.test199");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow(0, (int) 'a');
@@ -3598,9 +3585,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test201() throws Throwable {
+    public void test200() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test201");
+            System.out.format("%n%s%n", "HarmonyTester0.test200");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1399733633, (int) 'a');
         int int6 = harmony0.pow((int) (short) 0, (int) (short) 10);
@@ -3613,9 +3600,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test202() throws Throwable {
+    public void test201() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test202");
+            System.out.format("%n%s%n", "HarmonyTester0.test201");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1399733633, (int) 'a');
         int int6 = harmony0.pow((int) '#', 0);
@@ -3628,9 +3615,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test203() throws Throwable {
+    public void test202() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test203");
+            System.out.format("%n%s%n", "HarmonyTester0.test202");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -3647,9 +3634,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test204() throws Throwable {
+    public void test203() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test204");
+            System.out.format("%n%s%n", "HarmonyTester0.test203");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -3674,9 +3661,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test205() throws Throwable {
+    public void test204() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test205");
+            System.out.format("%n%s%n", "HarmonyTester0.test204");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow((int) '4', (int) ' ');
@@ -3689,9 +3676,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test206() throws Throwable {
+    public void test205() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test206");
+            System.out.format("%n%s%n", "HarmonyTester0.test205");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow(0, (int) 'a');
@@ -3708,9 +3695,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test207() throws Throwable {
+    public void test206() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test207");
+            System.out.format("%n%s%n", "HarmonyTester0.test206");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -3725,9 +3712,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test208() throws Throwable {
+    public void test207() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test208");
+            System.out.format("%n%s%n", "HarmonyTester0.test207");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow((int) (byte) -1, (int) 'a');
@@ -3746,9 +3733,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test209() throws Throwable {
+    public void test208() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test209");
+            System.out.format("%n%s%n", "HarmonyTester0.test208");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -3769,9 +3756,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test210() throws Throwable {
+    public void test209() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test210");
+            System.out.format("%n%s%n", "HarmonyTester0.test209");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow((int) (byte) -1, (int) 'a');
@@ -3790,30 +3777,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test211() throws Throwable {
+    public void test210() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test211");
-        Harmony harmony0 = new Harmony();
-        int int3 = harmony0.pow((int) '4', 0);
-        int int6 = harmony0.pow((int) (short) 100, 100);
-        int int9 = harmony0.pow((int) (byte) 10, 100);
-        int int12 = harmony0.pow(0, (int) '4');
-        int int15 = harmony0.pow((int) (short) 10, 100);
-        int int18 = harmony0.pow((int) (short) 0, (int) (byte) 100);
-        int int21 = harmony0.pow((-1303189143), (int) (short) 0);
-        org.junit.Assert.assertTrue("'" + int3 + "' != '" + 1 + "'", int3 == 1);
-        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 0 + "'", int6 == 0);
-        org.junit.Assert.assertTrue("'" + int9 + "' != '" + 0 + "'", int9 == 0);
-        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 0 + "'", int12 == 0);
-        org.junit.Assert.assertTrue("'" + int15 + "' != '" + 0 + "'", int15 == 0);
-        org.junit.Assert.assertTrue("'" + int18 + "' != '" + 0 + "'", int18 == 0);
-        org.junit.Assert.assertTrue("'" + int21 + "' != '" + 1 + "'", int21 == 1);
-    }
-
-    @Test
-    public void test212() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test212");
+            System.out.format("%n%s%n", "HarmonyTester0.test210");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -3834,9 +3800,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test213() throws Throwable {
+    public void test211() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test213");
+            System.out.format("%n%s%n", "HarmonyTester0.test211");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -3857,9 +3823,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test214() throws Throwable {
+    public void test212() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test214");
+            System.out.format("%n%s%n", "HarmonyTester0.test212");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow(0, (int) 'a');
@@ -3880,9 +3846,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test215() throws Throwable {
+    public void test213() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test215");
+            System.out.format("%n%s%n", "HarmonyTester0.test213");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) (short) 1, (int) ' ');
         int int6 = harmony0.pow(1, (int) (byte) 10);
@@ -3893,9 +3859,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test216() throws Throwable {
+    public void test214() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test216");
+            System.out.format("%n%s%n", "HarmonyTester0.test214");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -3920,9 +3886,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test217() throws Throwable {
+    public void test215() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test217");
+            System.out.format("%n%s%n", "HarmonyTester0.test215");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow((int) '4', (int) (byte) 0);
@@ -3939,9 +3905,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test218() throws Throwable {
+    public void test216() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test218");
+            System.out.format("%n%s%n", "HarmonyTester0.test216");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow(0, (int) 'a');
@@ -3958,9 +3924,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test219() throws Throwable {
+    public void test217() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test219");
+            System.out.format("%n%s%n", "HarmonyTester0.test217");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1399733633, (int) 'a');
         int int6 = harmony0.pow((int) (short) -1, 97);
@@ -3977,9 +3943,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test220() throws Throwable {
+    public void test218() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test220");
+            System.out.format("%n%s%n", "HarmonyTester0.test218");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -4002,9 +3968,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test221() throws Throwable {
+    public void test219() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test221");
+            System.out.format("%n%s%n", "HarmonyTester0.test219");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -4019,9 +3985,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test222() throws Throwable {
+    public void test220() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test222");
+            System.out.format("%n%s%n", "HarmonyTester0.test220");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow(0, (int) 'a');
@@ -4040,9 +4006,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test223() throws Throwable {
+    public void test221() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test223");
+            System.out.format("%n%s%n", "HarmonyTester0.test221");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -4057,9 +4023,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test224() throws Throwable {
+    public void test222() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test224");
+            System.out.format("%n%s%n", "HarmonyTester0.test222");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1399733633, (int) 'a');
         int int6 = harmony0.pow((int) (short) 1, (int) (byte) 0);
@@ -4072,9 +4038,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test225() throws Throwable {
+    public void test223() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test225");
+            System.out.format("%n%s%n", "HarmonyTester0.test223");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow(0, (int) 'a');
@@ -4097,9 +4063,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test226() throws Throwable {
+    public void test224() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test226");
+            System.out.format("%n%s%n", "HarmonyTester0.test224");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -4122,9 +4088,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test227() throws Throwable {
+    public void test225() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test227");
+            System.out.format("%n%s%n", "HarmonyTester0.test225");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow((int) (byte) 1, 0);
@@ -4139,9 +4105,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test228() throws Throwable {
+    public void test226() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test228");
+            System.out.format("%n%s%n", "HarmonyTester0.test226");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -4158,9 +4124,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test229() throws Throwable {
+    public void test227() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test229");
+            System.out.format("%n%s%n", "HarmonyTester0.test227");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, (int) (short) 100);
         int int6 = harmony0.pow((-1095247103), (int) 'a');
@@ -4169,9 +4135,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test230() throws Throwable {
+    public void test228() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test230");
+            System.out.format("%n%s%n", "HarmonyTester0.test228");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow((int) '4', (int) ' ');
@@ -4186,9 +4152,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test231() throws Throwable {
+    public void test229() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test231");
+            System.out.format("%n%s%n", "HarmonyTester0.test229");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1399733633, (int) 'a');
         int int6 = harmony0.pow((int) (short) 1, (int) (byte) 0);
@@ -4203,9 +4169,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test232() throws Throwable {
+    public void test230() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test232");
+            System.out.format("%n%s%n", "HarmonyTester0.test230");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -4226,9 +4192,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test233() throws Throwable {
+    public void test231() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test233");
+            System.out.format("%n%s%n", "HarmonyTester0.test231");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -4239,9 +4205,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test234() throws Throwable {
+    public void test232() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test234");
+            System.out.format("%n%s%n", "HarmonyTester0.test232");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow(0, (int) 'a');
@@ -4256,9 +4222,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test235() throws Throwable {
+    public void test233() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test235");
+            System.out.format("%n%s%n", "HarmonyTester0.test233");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1399733633, (int) 'a');
         int int6 = harmony0.pow((int) (short) 1, (int) (byte) 0);
@@ -4275,9 +4241,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test236() throws Throwable {
+    public void test234() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test236");
+            System.out.format("%n%s%n", "HarmonyTester0.test234");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow(0, (int) 'a');
@@ -4290,9 +4256,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test237() throws Throwable {
+    public void test235() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test237");
+            System.out.format("%n%s%n", "HarmonyTester0.test235");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(0, (int) (short) 0);
         int int6 = harmony0.pow(0, 0);
@@ -4303,9 +4269,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test238() throws Throwable {
+    public void test236() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test238");
+            System.out.format("%n%s%n", "HarmonyTester0.test236");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -4328,9 +4294,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test239() throws Throwable {
+    public void test237() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test239");
+            System.out.format("%n%s%n", "HarmonyTester0.test237");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(0, (int) (short) 0);
         int int6 = harmony0.pow(0, 0);
@@ -4347,9 +4313,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test240() throws Throwable {
+    public void test238() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test240");
+            System.out.format("%n%s%n", "HarmonyTester0.test238");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1399733633, (int) 'a');
         int int6 = harmony0.pow((int) (short) -1, 97);
@@ -4366,9 +4332,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test241() throws Throwable {
+    public void test239() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test241");
+            System.out.format("%n%s%n", "HarmonyTester0.test239");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1399733633, (int) 'a');
         int int6 = harmony0.pow((int) (short) 1, (int) (byte) 0);
@@ -4383,9 +4349,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test242() throws Throwable {
+    public void test240() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test242");
+            System.out.format("%n%s%n", "HarmonyTester0.test240");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow((int) (byte) -1, (int) 'a');
@@ -4404,9 +4370,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test243() throws Throwable {
+    public void test241() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test243");
+            System.out.format("%n%s%n", "HarmonyTester0.test241");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow((int) (byte) -1, (int) 'a');
@@ -4421,9 +4387,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test244() throws Throwable {
+    public void test242() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test244");
+            System.out.format("%n%s%n", "HarmonyTester0.test242");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow(0, (int) 'a');
@@ -4438,9 +4404,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test245() throws Throwable {
+    public void test243() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test245");
+            System.out.format("%n%s%n", "HarmonyTester0.test243");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -4457,9 +4423,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test246() throws Throwable {
+    public void test244() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test246");
+            System.out.format("%n%s%n", "HarmonyTester0.test244");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(0, (int) (short) 0);
         int int6 = harmony0.pow(0, 0);
@@ -4472,9 +4438,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test247() throws Throwable {
+    public void test245() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test247");
+            System.out.format("%n%s%n", "HarmonyTester0.test245");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1399733633, (int) 'a');
         int int6 = harmony0.pow((int) (short) 1, (int) (byte) 0);
@@ -4487,9 +4453,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test248() throws Throwable {
+    public void test246() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test248");
+            System.out.format("%n%s%n", "HarmonyTester0.test246");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow(0, (int) 'a');
@@ -4508,9 +4474,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test249() throws Throwable {
+    public void test247() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test249");
+            System.out.format("%n%s%n", "HarmonyTester0.test247");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -4529,9 +4495,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test250() throws Throwable {
+    public void test248() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test250");
+            System.out.format("%n%s%n", "HarmonyTester0.test248");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) (byte) 10, (int) (byte) 1);
         int int6 = harmony0.pow((int) (short) 0, (int) (short) 10);
@@ -4548,9 +4514,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test251() throws Throwable {
+    public void test249() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test251");
+            System.out.format("%n%s%n", "HarmonyTester0.test249");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -4567,9 +4533,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test252() throws Throwable {
+    public void test250() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test252");
+            System.out.format("%n%s%n", "HarmonyTester0.test250");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1661992960, (int) (byte) 1);
         int int6 = harmony0.pow(100, 97);
@@ -4584,9 +4550,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test253() throws Throwable {
+    public void test251() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test253");
+            System.out.format("%n%s%n", "HarmonyTester0.test251");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow((int) (byte) -1, (int) 'a');
@@ -4601,9 +4567,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test254() throws Throwable {
+    public void test252() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test254");
+            System.out.format("%n%s%n", "HarmonyTester0.test252");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow((int) (byte) -1, (int) 'a');
@@ -4618,9 +4584,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test255() throws Throwable {
+    public void test253() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test255");
+            System.out.format("%n%s%n", "HarmonyTester0.test253");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(0, (int) (short) 0);
         int int6 = harmony0.pow(0, 0);
@@ -4635,9 +4601,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test256() throws Throwable {
+    public void test254() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test256");
+            System.out.format("%n%s%n", "HarmonyTester0.test254");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow(0, (int) 'a');
@@ -4654,9 +4620,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test257() throws Throwable {
+    public void test255() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test257");
+            System.out.format("%n%s%n", "HarmonyTester0.test255");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) (short) 1, (int) ' ');
         int int6 = harmony0.pow(1, (int) (byte) 100);
@@ -4669,9 +4635,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test258() throws Throwable {
+    public void test256() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test258");
+            System.out.format("%n%s%n", "HarmonyTester0.test256");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -4696,9 +4662,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test259() throws Throwable {
+    public void test257() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test259");
+            System.out.format("%n%s%n", "HarmonyTester0.test257");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -4721,9 +4687,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test260() throws Throwable {
+    public void test258() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test260");
+            System.out.format("%n%s%n", "HarmonyTester0.test258");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -4746,9 +4712,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test261() throws Throwable {
+    public void test259() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test261");
+            System.out.format("%n%s%n", "HarmonyTester0.test259");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -4767,9 +4733,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test262() throws Throwable {
+    public void test260() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test262");
+            System.out.format("%n%s%n", "HarmonyTester0.test260");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow((int) '4', (int) (byte) 0);
@@ -4786,9 +4752,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test263() throws Throwable {
+    public void test261() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test263");
+            System.out.format("%n%s%n", "HarmonyTester0.test261");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -4807,9 +4773,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test264() throws Throwable {
+    public void test262() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test264");
+            System.out.format("%n%s%n", "HarmonyTester0.test262");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -4828,9 +4794,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test265() throws Throwable {
+    public void test263() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test265");
+            System.out.format("%n%s%n", "HarmonyTester0.test263");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) (short) 0, 0);
         int int6 = harmony0.pow((-1917263871), 0);
@@ -4839,9 +4805,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test266() throws Throwable {
+    public void test264() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test266");
+            System.out.format("%n%s%n", "HarmonyTester0.test264");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -4862,34 +4828,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test267() throws Throwable {
+    public void test265() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test267");
-        Harmony harmony0 = new Harmony();
-        int int3 = harmony0.pow((int) '4', 0);
-        int int6 = harmony0.pow((int) (short) 100, 100);
-        int int9 = harmony0.pow((int) (byte) 100, 10);
-        int int12 = harmony0.pow((int) (byte) 1, (int) (byte) 0);
-        int int15 = harmony0.pow((int) (short) 100, 10);
-        int int18 = harmony0.pow(0, 32);
-        int int21 = harmony0.pow((int) (short) -1, 35);
-        int int24 = harmony0.pow((-1), 97);
-        int int27 = harmony0.pow(1844020737, (int) (short) 100);
-        org.junit.Assert.assertTrue("'" + int3 + "' != '" + 1 + "'", int3 == 1);
-        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 0 + "'", int6 == 0);
-        org.junit.Assert.assertTrue("'" + int9 + "' != '" + 1661992960 + "'", int9 == 1661992960);
-        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 1 + "'", int12 == 1);
-        org.junit.Assert.assertTrue("'" + int15 + "' != '" + 1661992960 + "'", int15 == 1661992960);
-        org.junit.Assert.assertTrue("'" + int18 + "' != '" + 0 + "'", int18 == 0);
-        org.junit.Assert.assertTrue("'" + int21 + "' != '" + (-1) + "'", int21 == (-1));
-        org.junit.Assert.assertTrue("'" + int24 + "' != '" + (-1) + "'", int24 == (-1));
-        org.junit.Assert.assertTrue("'" + int27 + "' != '" + (-749709311) + "'", int27 == (-749709311));
-    }
-
-    @Test
-    public void test268() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test268");
+            System.out.format("%n%s%n", "HarmonyTester0.test265");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -4910,9 +4851,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test269() throws Throwable {
+    public void test266() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test269");
+            System.out.format("%n%s%n", "HarmonyTester0.test266");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -4935,9 +4876,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test270() throws Throwable {
+    public void test267() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test270");
+            System.out.format("%n%s%n", "HarmonyTester0.test267");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1399733633, (int) 'a');
         int int6 = harmony0.pow((int) (short) 1, (int) (byte) 0);
@@ -4948,9 +4889,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test271() throws Throwable {
+    public void test268() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test271");
+            System.out.format("%n%s%n", "HarmonyTester0.test268");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow((int) (byte) 1, 0);
@@ -4967,9 +4908,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test272() throws Throwable {
+    public void test269() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test272");
+            System.out.format("%n%s%n", "HarmonyTester0.test269");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) (byte) 10, (int) (byte) 1);
         int int6 = harmony0.pow((int) (short) 0, (int) (short) 10);
@@ -4986,9 +4927,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test273() throws Throwable {
+    public void test270() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test273");
+            System.out.format("%n%s%n", "HarmonyTester0.test270");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow((int) (byte) 1, 0);
@@ -4999,9 +4940,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test274() throws Throwable {
+    public void test271() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test274");
+            System.out.format("%n%s%n", "HarmonyTester0.test271");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1399733633, (int) 'a');
         int int6 = harmony0.pow(427819009, (int) 'a');
@@ -5012,9 +4953,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test275() throws Throwable {
+    public void test272() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test275");
+            System.out.format("%n%s%n", "HarmonyTester0.test272");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow((int) (byte) 1, 0);
@@ -5031,9 +4972,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test276() throws Throwable {
+    public void test273() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test276");
+            System.out.format("%n%s%n", "HarmonyTester0.test273");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow((int) '4', (int) ' ');
@@ -5048,9 +4989,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test277() throws Throwable {
+    public void test274() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test277");
+            System.out.format("%n%s%n", "HarmonyTester0.test274");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -5069,9 +5010,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test278() throws Throwable {
+    public void test275() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test278");
+            System.out.format("%n%s%n", "HarmonyTester0.test275");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow((int) '4', (int) ' ');
@@ -5086,9 +5027,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test279() throws Throwable {
+    public void test276() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test279");
+            System.out.format("%n%s%n", "HarmonyTester0.test276");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -5107,9 +5048,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test280() throws Throwable {
+    public void test277() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test280");
+            System.out.format("%n%s%n", "HarmonyTester0.test277");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -5124,9 +5065,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test281() throws Throwable {
+    public void test278() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test281");
+            System.out.format("%n%s%n", "HarmonyTester0.test278");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1661992960, (int) (byte) 1);
         int int6 = harmony0.pow(0, (int) 'a');
@@ -5139,9 +5080,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test282() throws Throwable {
+    public void test279() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test282");
+            System.out.format("%n%s%n", "HarmonyTester0.test279");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) (byte) 10, (int) (byte) 1);
         int int6 = harmony0.pow((int) (short) 0, (int) (short) 10);
@@ -5158,9 +5099,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test283() throws Throwable {
+    public void test280() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test283");
+            System.out.format("%n%s%n", "HarmonyTester0.test280");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -5181,9 +5122,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test284() throws Throwable {
+    public void test281() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test284");
+            System.out.format("%n%s%n", "HarmonyTester0.test281");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 100, 100);
@@ -5202,9 +5143,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test285() throws Throwable {
+    public void test282() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test285");
+            System.out.format("%n%s%n", "HarmonyTester0.test282");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) '4', 0);
         int int6 = harmony0.pow((int) (short) 1, 97);
@@ -5215,9 +5156,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test286() throws Throwable {
+    public void test283() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test286");
+            System.out.format("%n%s%n", "HarmonyTester0.test283");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow((int) (byte) 10, (int) (byte) 1);
         int int6 = harmony0.pow((-447362047), (int) (byte) 100);
@@ -5226,9 +5167,9 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test287() throws Throwable {
+    public void test284() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test287");
+            System.out.format("%n%s%n", "HarmonyTester0.test284");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow(0, (int) 'a');
@@ -5247,9 +5188,39 @@ public class HarmonyTester0 {
     }
 
     @Test
-    public void test288() throws Throwable {
+    public void test285() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "HarmonyTester0.test288");
+            System.out.format("%n%s%n", "HarmonyTester0.test285");
+        Harmony harmony0 = new Harmony();
+        int int3 = harmony0.pow(1, 0);
+        int int6 = harmony0.pow((int) (byte) -1, (int) 'a');
+        int int9 = harmony0.pow(1661992960, (int) (short) 0);
+        int int12 = harmony0.pow((int) (short) 100, (int) '#');
+        int int15 = harmony0.pow((-1), (int) (short) 1);
+        org.junit.Assert.assertTrue("'" + int3 + "' != '" + 1 + "'", int3 == 1);
+        org.junit.Assert.assertTrue("'" + int6 + "' != '" + (-1) + "'", int6 == (-1));
+        org.junit.Assert.assertTrue("'" + int9 + "' != '" + 1 + "'", int9 == 1);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 0 + "'", int12 == 0);
+        org.junit.Assert.assertTrue("'" + int15 + "' != '" + (-1) + "'", int15 == (-1));
+    }
+
+    @Test
+    public void test286() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "HarmonyTester0.test286");
+        Harmony harmony0 = new Harmony();
+        int int3 = harmony0.pow(1, 0);
+        int int6 = harmony0.pow((int) (byte) 1, 0);
+        int int9 = harmony0.pow(1661992960, (int) 'a');
+        org.junit.Assert.assertTrue("'" + int3 + "' != '" + 1 + "'", int3 == 1);
+        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 1 + "'", int6 == 1);
+        org.junit.Assert.assertTrue("'" + int9 + "' != '" + 0 + "'", int9 == 0);
+    }
+
+    @Test
+    public void test287() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "HarmonyTester0.test287");
         Harmony harmony0 = new Harmony();
         int int3 = harmony0.pow(1, 0);
         int int6 = harmony0.pow(0, (int) 'a');
@@ -5257,12 +5228,152 @@ public class HarmonyTester0 {
         int int12 = harmony0.pow((-1599473663), 1);
         int int15 = harmony0.pow(761757697, 52);
         int int18 = harmony0.pow((int) (short) -1, (int) (byte) 0);
+        java.lang.Class<?> wildcardClass19 = harmony0.getClass();
         org.junit.Assert.assertTrue("'" + int3 + "' != '" + 1 + "'", int3 == 1);
         org.junit.Assert.assertTrue("'" + int6 + "' != '" + 0 + "'", int6 == 0);
         org.junit.Assert.assertTrue("'" + int9 + "' != '" + 1 + "'", int9 == 1);
         org.junit.Assert.assertTrue("'" + int12 + "' != '" + (-1599473663) + "'", int12 == (-1599473663));
         org.junit.Assert.assertTrue("'" + int15 + "' != '" + (-1190789119) + "'", int15 == (-1190789119));
         org.junit.Assert.assertTrue("'" + int18 + "' != '" + 1 + "'", int18 == 1);
+        org.junit.Assert.assertNotNull(wildcardClass19);
+    }
+
+    @Test
+    public void test288() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "HarmonyTester0.test288");
+        Harmony harmony0 = new Harmony();
+        int int3 = harmony0.pow((int) '4', 0);
+        int int6 = harmony0.pow((int) (short) 100, 100);
+        int int9 = harmony0.pow((int) (byte) 10, 100);
+        int int12 = harmony0.pow(0, (int) '4');
+        int int15 = harmony0.pow((int) (short) 10, 100);
+        int int18 = harmony0.pow((int) (short) 0, (int) (byte) 100);
+        int int21 = harmony0.pow((-1303189143), (int) (short) 0);
+        java.lang.Class<?> wildcardClass22 = harmony0.getClass();
+        org.junit.Assert.assertTrue("'" + int3 + "' != '" + 1 + "'", int3 == 1);
+        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 0 + "'", int6 == 0);
+        org.junit.Assert.assertTrue("'" + int9 + "' != '" + 0 + "'", int9 == 0);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 0 + "'", int12 == 0);
+        org.junit.Assert.assertTrue("'" + int15 + "' != '" + 0 + "'", int15 == 0);
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + 0 + "'", int18 == 0);
+        org.junit.Assert.assertTrue("'" + int21 + "' != '" + 1 + "'", int21 == 1);
+        org.junit.Assert.assertNotNull(wildcardClass22);
+    }
+
+    @Test
+    public void test289() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "HarmonyTester0.test289");
+        Harmony harmony0 = new Harmony();
+        int int3 = harmony0.pow(1, 0);
+        int int6 = harmony0.pow((int) (byte) 1, 0);
+        int int9 = harmony0.pow((int) ' ', 32);
+        int int12 = harmony0.pow((-1303189143), 0);
+        org.junit.Assert.assertTrue("'" + int3 + "' != '" + 1 + "'", int3 == 1);
+        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 1 + "'", int6 == 1);
+        org.junit.Assert.assertTrue("'" + int9 + "' != '" + 0 + "'", int9 == 0);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 1 + "'", int12 == 1);
+    }
+
+    @Test
+    public void test290() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "HarmonyTester0.test290");
+        Harmony harmony0 = new Harmony();
+        int int3 = harmony0.pow(1399733633, (int) 'a');
+        int int6 = harmony0.pow((int) (short) -1, 97);
+        int int9 = harmony0.pow((-1917263871), (int) ' ');
+        java.lang.Class<?> wildcardClass10 = harmony0.getClass();
+        org.junit.Assert.assertTrue("'" + int3 + "' != '" + (-1401860735) + "'", int3 == (-1401860735));
+        org.junit.Assert.assertTrue("'" + int6 + "' != '" + (-1) + "'", int6 == (-1));
+        org.junit.Assert.assertTrue("'" + int9 + "' != '" + 1998323713 + "'", int9 == 1998323713);
+        org.junit.Assert.assertNotNull(wildcardClass10);
+    }
+
+    @Test
+    public void test291() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "HarmonyTester0.test291");
+        Harmony harmony0 = new Harmony();
+        int int3 = harmony0.pow((int) '4', 0);
+        int int6 = harmony0.pow((int) (short) 100, 100);
+        int int9 = harmony0.pow((int) (byte) 100, 10);
+        int int12 = harmony0.pow((int) (byte) 1, (int) (byte) 0);
+        int int15 = harmony0.pow((int) (short) 100, 10);
+        int int18 = harmony0.pow(0, 32);
+        int int21 = harmony0.pow((int) (short) -1, 35);
+        int int24 = harmony0.pow((-1), 97);
+        int int27 = harmony0.pow(1844020737, (int) (short) 100);
+        int int30 = harmony0.pow((int) (byte) 1, (int) (byte) 10);
+        org.junit.Assert.assertTrue("'" + int3 + "' != '" + 1 + "'", int3 == 1);
+        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 0 + "'", int6 == 0);
+        org.junit.Assert.assertTrue("'" + int9 + "' != '" + 1661992960 + "'", int9 == 1661992960);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 1 + "'", int12 == 1);
+        org.junit.Assert.assertTrue("'" + int15 + "' != '" + 1661992960 + "'", int15 == 1661992960);
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + 0 + "'", int18 == 0);
+        org.junit.Assert.assertTrue("'" + int21 + "' != '" + (-1) + "'", int21 == (-1));
+        org.junit.Assert.assertTrue("'" + int24 + "' != '" + (-1) + "'", int24 == (-1));
+        org.junit.Assert.assertTrue("'" + int27 + "' != '" + (-749709311) + "'", int27 == (-749709311));
+        org.junit.Assert.assertTrue("'" + int30 + "' != '" + 1 + "'", int30 == 1);
+    }
+
+    @Test
+    public void test292() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "HarmonyTester0.test292");
+        Harmony harmony0 = new Harmony();
+        int int3 = harmony0.pow((int) (byte) 1, (int) (byte) 0);
+        int int6 = harmony0.pow(10, 0);
+        int int9 = harmony0.pow((int) (short) 0, (int) (short) 100);
+        java.lang.Class<?> wildcardClass10 = harmony0.getClass();
+        org.junit.Assert.assertTrue("'" + int3 + "' != '" + 1 + "'", int3 == 1);
+        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 1 + "'", int6 == 1);
+        org.junit.Assert.assertTrue("'" + int9 + "' != '" + 0 + "'", int9 == 0);
+        org.junit.Assert.assertNotNull(wildcardClass10);
+    }
+
+    @Test
+    public void test293() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "HarmonyTester0.test293");
+        Harmony harmony0 = new Harmony();
+        int int3 = harmony0.pow(1, 0);
+        int int6 = harmony0.pow((int) (byte) 1, 0);
+        int int9 = harmony0.pow((int) (short) 10, 100);
+        int int12 = harmony0.pow((-447362047), 0);
+        org.junit.Assert.assertTrue("'" + int3 + "' != '" + 1 + "'", int3 == 1);
+        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 1 + "'", int6 == 1);
+        org.junit.Assert.assertTrue("'" + int9 + "' != '" + 0 + "'", int9 == 0);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 1 + "'", int12 == 1);
+    }
+
+    @Test
+    public void test294() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "HarmonyTester0.test294");
+        Harmony harmony0 = new Harmony();
+        int int3 = harmony0.pow(1399733633, (int) 'a');
+        int int6 = harmony0.pow(32, (int) (short) 10);
+        int int9 = harmony0.pow((int) (short) 10, (int) (short) 100);
+        int int12 = harmony0.pow((-763337727), 97);
+        org.junit.Assert.assertTrue("'" + int3 + "' != '" + (-1401860735) + "'", int3 == (-1401860735));
+        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 0 + "'", int6 == 0);
+        org.junit.Assert.assertTrue("'" + int9 + "' != '" + 0 + "'", int9 == 0);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 900064257 + "'", int12 == 900064257);
+    }
+
+    @Test
+    public void test295() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "HarmonyTester0.test295");
+        Harmony harmony0 = new Harmony();
+        int int3 = harmony0.pow(1399733633, (int) 'a');
+        int int6 = harmony0.pow((int) '#', 0);
+        int int9 = harmony0.pow((-1303189143), 0);
+        org.junit.Assert.assertTrue("'" + int3 + "' != '" + (-1401860735) + "'", int3 == (-1401860735));
+        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 1 + "'", int6 == 1);
+        org.junit.Assert.assertTrue("'" + int9 + "' != '" + 1 + "'", int9 == 1);
     }
 }
 
