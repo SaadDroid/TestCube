@@ -102,6 +102,15 @@
             text-align: left;
 
             padding-left: 3%;
+
+            padding-top: 10px;
+
+            padding-bottom: 10px;
+        }
+
+        .left_td label{
+            color: #f5f7e7;
+            font-size: 15px;
         }
 
         .box input[type = "submit"]{
@@ -323,12 +332,24 @@
                     <td><textarea id="j_code" name="j_code" ></textarea></td>
                     <td><textarea id="e_behavior" name="e_behavior"></textarea></td>
                 </tr>
+            </table>
+            <table>
                 <tr style="text-align: center;">
-                    <td class="left_td"><input type="file" name="j_file" style="color: white;"></td>
-                    <td class="left_td"><input type="file" name="e_file" style="color:white;"></td>
+                    <td class="left_td">
+                        <label for="j_file">Source Code:</label>
+                        <input type="file" name="j_file" style="color: white;">
+                    </td>
+                    <td class="left_td">
+                        <label for="p_folder">Source Directory:</label>
+                        <input type="file" name="p_folder" webkitdirectory mozdirectory />
+                    </td>
+                    <td class="left_td">
+                        <label for="e_file">Expected Behavior:</label>
+                        <input type="file" name="e_file" style="color:white;">
+                    </td>
                 </tr>
             </table>
-            <table style="width: 60%;margin-left:auto;margin-right:auto; text-align: left;">
+            <table style="width: 60%;margin-left:auto;margin-right:auto; text-align: left; padding-top: 15px;">
                 <tr>
                     <td style="font-size: 15px; color: #818181;">
                         <h6 style="position: relative; top: 8px">Try our machine learning based solution?</h6>

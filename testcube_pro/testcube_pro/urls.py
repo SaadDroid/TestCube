@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import include, path
 from run_randoop import views as rr_views
 from authentication import views as auth_view
+from downloadFile import views as d_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +27,5 @@ urlpatterns = [
     path('run_randoop/previous/<int:id>', rr_views.viewSpecificUsage, name="index"),
     path('execute-randoop', include('run_randoop.urls')),
     path('', include('authentication.urls')),
+    path('run_randoop/previous/download/<str:filename>', d_view.download_file, name="index"),
 ]

@@ -336,6 +336,15 @@
             background: none;
         }
 
+        .colored_i a{
+            text-decoration: none;
+        }
+
+        .colored_i a:hover{
+            background-color: #2ecc71;
+            color: #2ecc71;
+        }
+
         .colored_i i {
             color:#818181
         }
@@ -464,15 +473,21 @@
                             <i class="fa fa-copy" style="padding-left: 5px;font-size:20px;"></i>
                         </button>
                     </div>
+                    <a class="colored_i" href="download/{{usage_data.class_name}}.java" >
+                        <i class="fa fa-download boo" style="padding-left: 10px;font-size:20px;color: #818181;"></i>
+                    </a>
                 </td>
                 <td class="left_td">
-                    Test Code
+                    Regression Tests
                     <div class="tooltip">
                         <button class="colored_i" onclick="myFunction2()" onmouseout="outFunc2()">
                             <span class="tooltiptext" id="myTooltip2">Copy to clipboard</span>
                             <i class="fa fa-copy" style="padding-left: 5px;font-size:20px;"></i>
                         </button>
                     </div>
+                    <a class="colored_i" href="download/{{usage_data.class_name}}RegTester0.java" >
+                        <i class="fa fa-download boo" style="padding-left: 10px;font-size:20px;color: #818181;"></i>
+                    </a>
                 </td>
             </tr>
             <tr >
@@ -482,13 +497,16 @@
 
             <tr>
                 <td class="left_td">
-                    Report
+                    Error Revealing Tests
                     <div class="tooltip">
                         <button class="colored_i" onclick="myFunction3()" onmouseout="outFunc3()">
                             <span class="tooltiptext" id="myTooltip3">Copy to clipboard</span>
                             <i class="fa fa-copy" style="padding-left: 5px;font-size:20px;"></i>
                         </button>
                     </div>
+                    <a class="colored_i" href="download/{{usage_data.class_name}}ErrTester0.java" >
+                        <i class="fa fa-download boo" style="padding-left: 10px;font-size:20px;color: #818181;"></i>
+                    </a>
                 </td>
                 <td class="left_td">
                     Expected Behavior
@@ -498,6 +516,9 @@
                             <i class="fa fa-copy" style="padding-left: 5px;font-size:20px;"></i>
                         </button>
                     </div>
+                    <a class="colored_i" href="download/ex_behavior.json" >
+                        <i class="fa fa-download boo" style="padding-left: 10px;font-size:20px;color: #818181;"></i>
+                    </a>
                 </td>
             </tr>
             <tr>
