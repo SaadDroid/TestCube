@@ -28,4 +28,5 @@ urlpatterns = [
     path('execute-randoop', include('run_randoop.urls')),
     path('', include('authentication.urls')),
     path('run_randoop/previous/download/<str:filename>', d_view.download_file, name="index"),
+    path('download/<str:filename>', d_view.download_file, name="index"),
 ]
