@@ -91,7 +91,9 @@ def run_rand(request):
         # java -cp "G:\Study\5th Sem\SPL\TestCube\testcube_pro\observer\observer;G:\Downloads\randoop-4.3.0\randoop\randoop-all-4.3.0.jar" randoop.main.Main gentests --test-package="observer" --unchecked-exception="error" 
         # G:\Study\5th Sem\SPL\TestCube\testcube_pro\builderObserver.jar
         # java -cp "G:\Study\5th Sem\SPL\TestCube\testcube_pro\;G:\Downloads\randoop-4.3.0\randoop\randoop-all-4.3.0.jar" randoop.main.Main gentests --testclass="adder" --unchecked-exception="error" 
-        rand_command = 'java -cp "'+j_dir+';'+rand_dir+'" randoop.main.Main gentests --testclass="'+className+'"'+' --regression-test-basename='+'"'+className+'Tester" --time-limit=20 --unchecked-exception="error"'
+        rand_command = 'java -cp "'+j_dir+';'+rand_dir+'" randoop.main.Main gentests --testclass="'+className+'"'+' --regression-test-basename='+'"'+className+'RegTester" --error-test-basename'+'"'+className+'ErrTester" --time-limit=20'
+        if ex_choice == 'on':
+            rand_command+=' --unchecked-exception="error"'
         # print(rand_command)
         if ex_filename != '':
             rand_command += ' --specifications='+ex_filename
@@ -100,9 +102,9 @@ def run_rand(request):
             messages.error(request, 'Something went wrong while executing randoop')
             return redirect('run_randoop/')
 
-        test_file = open(j_dir+'/'+className+'Tester0.java', 'r')
+        test_file = open(j_dir+'/'+className+'RegTester0.java', 'r')
         test_file_dct = test_file.readlines()
-        test_file_str = '// '+className+'Tester0.java'+'\n'
+        test_file_str = '// '+className+'RegTester0.java'+'\n'
         for line in test_file_dct:
             test_file_str += line+'\n'
         test_file.close()

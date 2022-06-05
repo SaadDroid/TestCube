@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'run_randoop',
     'authentication',
+    'downloadFile',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +57,7 @@ ROOT_URLCONF = 'testcube_pro.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['G:\Study\5th Sem\SPL\TestCube\testcube_pro\downloadFile\templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
