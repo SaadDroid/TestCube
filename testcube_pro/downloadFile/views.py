@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
+from django.contrib import messages
 
 # Import mimetypes module
 import mimetypes
@@ -27,5 +28,6 @@ def download_file(request, filename=''):
         # Return the response value
         return response
     else:
+        messages.error('File does not exist')
         # Load the template
-        return render(request, 'file.html')
+        return redirect('run_randoop/')
