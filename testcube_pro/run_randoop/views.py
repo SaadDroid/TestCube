@@ -72,7 +72,7 @@ def run_rand(request):
             
             test_file = open('G:\Study\\5th Sem\SPL\TestCube\\testcube_pro\RegressionTest0.java', 'r')
             test_file_dct = test_file.readlines()
-            test_file_str = '// RegressionTest0.java'+'\n/// '+str(random.randint(0, 1234567)) +'\n'
+            test_file_str = '// RegressionTest0.java'+'\n// '+str(random.randint(0, 1234567)) +'\n '
             for line in test_file_dct:
                 test_file_str += line+'\n'
             test_file.close()
