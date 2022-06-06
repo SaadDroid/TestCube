@@ -9,6 +9,9 @@ from django.contrib.auth import authenticate
 from django.contrib.auth import login as _login
 from django.contrib.auth import logout as _logout
 from django.shortcuts import get_object_or_404
+import random
+from django.core.mail import send_mail
+
 
 # Create your views here.
 def home(request):
@@ -23,6 +26,17 @@ def signup(request):
         pass1 = request.POST['pass1']
         pass2 = request.POST['pass2']
         if pass1 == pass2:
+
+            # otp = genOTP()
+            
+            # send_mail(
+            # 'Your account confirmation message',
+            # 'Welcome to test cube. Please provide the following OTP to complete your account creation.\nYour OTP is: '+otp+'\nThank you for using TestCube',
+            # 'bsse1122@iit.du.ac.bd',
+            # [email],
+            # fail_silently=True,
+            # )
+
             myuser = User.objects.create_user(username, email, pass1)
             myuser.first_name = firstname
             myuser.last_name = lastname
@@ -32,6 +46,17 @@ def signup(request):
         else:
             messages.error(request,'passwords did not match')
     return render(request, "signup_1.html")
+
+
+def confUser(request):
+    return render('login/')
+
+
+def genOTP():
+    otp = ''
+    for x in range(6):
+        otp += str(random.randint(0,9))
+    return otp
 
 
 def login(request):
