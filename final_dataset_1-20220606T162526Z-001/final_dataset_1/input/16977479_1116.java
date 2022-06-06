@@ -1,0 +1,3 @@
+AtmosphereFramework getAtmosphereFramework() {
+        return framework;
+    }

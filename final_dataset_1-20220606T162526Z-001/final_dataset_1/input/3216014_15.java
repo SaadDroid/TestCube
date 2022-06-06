@@ -1,0 +1,3 @@
+double getSentenceMean() {
+        return sentenceMean;
+    }

@@ -1,0 +1,3 @@
+private ConstraintReportId() {
+		// JPA Friendly
+	}

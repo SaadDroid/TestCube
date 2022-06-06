@@ -1,4 +1,5 @@
 from os import system, getcwd
+import random
 from django.contrib import messages
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
@@ -71,7 +72,7 @@ def run_rand(request):
             
             test_file = open('G:\Study\\5th Sem\SPL\TestCube\\testcube_pro\RegressionTest0.java', 'r')
             test_file_dct = test_file.readlines()
-            test_file_str = '// RegressionTest0.java'+'\n'
+            test_file_str = '// RegressionTest0.java'+'\n/// '+str(random.randint(0, 1234567)) +'\n'
             for line in test_file_dct:
                 test_file_str += line+'\n'
             test_file.close()
@@ -166,12 +167,18 @@ def run_rand(request):
         # java -cp "G:\Study\5th Sem\SPL\TestCube\testcube_pro\;G:\Downloads\randoop-4.3.0\randoop\randoop-all-4.3.0.jar" randoop.main.Main gentests --testclass="adder" --unchecked-exception="error" 
         f1 = open(className+'ErrTester0.java', 'w+')
         f1.close()
-        rand_command = 'java -cp "'+j_dir+';'+rand_dir+'" randoop.main.Main gentests --testclass="'+className+'"'+' --regression-test-basename='+'"'+className+'RegTester" --error-test-basename '+'"'+className+'ErrTester" --time-limit=20'
+        rand_command = 'java -cp "'+j_dir+';'+rand_dir+'" randoop.main.Main gentests --testclass="'+className+'"'+' --regression-test-basename='+'"'+className+'RegTester" --error-test-basename '+'"'+className+'ErrTester"'
+        
+        ex_time = request.POST['ex_time']
+        
+        rand_command +=  ' --time-limit='+str(ex_time)
+
         if ex_choice == 'on':
             rand_command+=' --unchecked-exception="error"'
         # print(rand_command)
         if ex_filename != '':
             rand_command += ' --specifications='+ex_filename
+
         p = system(rand_command)
         if p != 0:
             messages.error(request, 'Something went wrong while executing randoop')
@@ -179,7 +186,7 @@ def run_rand(request):
 
         test_file = open(j_dir+'/'+className+'RegTester0.java', 'r')
         test_file_dct = test_file.readlines()
-        test_file_str = '// '+className+'RegTester0.java'+'\n'
+        test_file_str = '// '+className+'RegTester0.java'+'\n// ' + str(random.randint(0, 1234567))  +'\n'
         for line in test_file_dct:
             test_file_str += line+'\n'
         test_file.close()

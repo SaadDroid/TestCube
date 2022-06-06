@@ -1,0 +1,1 @@
+public abstract InterestRate fromContinuous(ContinuousInterestRate continuous);

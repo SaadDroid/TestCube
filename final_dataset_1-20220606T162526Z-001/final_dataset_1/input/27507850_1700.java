@@ -1,0 +1,27 @@
+@Override
+  public Builder toBuilder() {
+    return builder()
+        .setNetwork(getNetwork())
+        .setAdmin(getAdministrativeCost())
+        .setNonRouting(getNonRouting())
+        .setNonForwarding(getNonForwarding())
+        .setAsPath(_asPath)
+        .setClusterList(_clusterList)
+        .setCommunities(_communities)
+        .setDiscard(_discard)
+        .setIp(_ip)
+        .setLocalPreference(_localPreference)
+        .setMacAddress(_macAddress)
+        .setMetric(_med)
+        .setNextHopInterface(_nextHopInterface)
+        .setNextHopIp(_nextHopIp)
+        .setOriginatorIp(_originatorIp)
+        .setOriginType(_originType)
+        .setProtocol(_protocol)
+        .setReceivedFromIp(_receivedFromIp)
+        .setReceivedFromRouteReflectorClient(_receivedFromRouteReflectorClient)
+        .setRouteDistinguisher(_routeDistinguisher)
+        .setSrcProtocol(_srcProtocol)
+        .setTag(_tag)
+        .setWeight(_weight);
+  }
