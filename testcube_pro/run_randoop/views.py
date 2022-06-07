@@ -111,15 +111,20 @@ def run_rand(request):
                 test_file_str += line+'\n'
             test_file.close()
             
-            err_file = open('G:\Study\\5th Sem\SPL\TestCube\\testcube_pro\ObserverErrTester0.java', 'r')
+            try:
+                err_file = open('G:\Study\\5th Sem\SPL\TestCube\\testcube_pro\ObserverErrTester0.java', 'r')
+                err_file_dct = err_file.readlines()
+                err_file_str = ''
+                if len(err_file_dct)!=0:
+                    err_file_str = '// ObserverErrTester0.java'+'\n'
+                for line in err_file_dct:
+                    err_file_str += line+'\n'
+                err_file.close()
+            except:
+                err_file_str = ''
 
-            err_file_dct = err_file.readlines()
-            err_file_str = ''
-            if len(err_file_dct)!=0:
-                err_file_str = '// ObserverErrTester0.java'+'\n'
-            for line in err_file_dct:
-                err_file_str += line+'\n'
-            err_file.close()
+            
+            
 
             cur_user = User.objects.get(name=request.user.username)
             cur_user.user_codes_set.create(class_name = 'observer' ,source_code = '', test_code=test_file_str, expected_behavior='', report=err_file_str, used_tool='randoop')
@@ -164,7 +169,7 @@ def run_rand(request):
         e_behavior = request.POST['e_behavior']
         ex_filename = ''
         if e_behavior != '':
-            ex_filename = 'ex_behavior.json'
+            ex_filename = className+'_ex_behavior.json'
             e_file = open(ex_filename, "w+")
             e_file.write(e_behavior)
             e_file.close()
