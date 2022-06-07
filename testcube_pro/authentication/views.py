@@ -52,6 +52,9 @@ def signup(request):
             print('')
         pass1 = request.POST['pass1']
         pass2 = request.POST['pass2']
+        if len(pass1)<6:
+            messages.error(request, 'Password must be at least 6 letters long')
+            return redirect('signup')
         if pass1 == pass2:
             global otp
             otp = genOTP()
