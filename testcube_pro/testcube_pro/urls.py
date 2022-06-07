@@ -29,4 +29,5 @@ urlpatterns = [
     path('', include('authentication.urls')),
     path('run_randoop/previous/download/<str:filename>', d_view.download_file, name="index"),
     path('download/<str:filename>', d_view.download_file, name="index"),
+    # path('confirm/', auth_view.conf)
 ]
