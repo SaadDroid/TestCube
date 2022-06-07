@@ -1,3 +1,0 @@
-public List<String> getRoles() {
-    return roles;
-  }

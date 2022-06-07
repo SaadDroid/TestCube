@@ -1,5 +1,0 @@
-@Override
-    public String getLocation()
-    {
-        return location;
-    }

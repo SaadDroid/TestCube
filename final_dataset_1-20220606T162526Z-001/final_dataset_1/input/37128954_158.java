@@ -1,3 +1,0 @@
-String getServiceType() {
-        return mServiceType;
-    }

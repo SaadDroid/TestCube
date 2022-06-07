@@ -1,3 +1,0 @@
-RMEndpoint getReliableEndpoint() {
-        return reliableEndpoint;
-    }

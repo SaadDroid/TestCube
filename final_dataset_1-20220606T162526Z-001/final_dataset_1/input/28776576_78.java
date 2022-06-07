@@ -1,3 +1,0 @@
-public String getIp() {
-        return ip;
-    }

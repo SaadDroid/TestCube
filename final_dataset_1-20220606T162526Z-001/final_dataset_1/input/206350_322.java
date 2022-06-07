@@ -1,3 +1,0 @@
-String getParent() {
-        return parent;
-    }
