@@ -33,6 +33,7 @@ def run_rand(request):
 
         ex_choice = ''
         ml_choice = ''
+        j_dir = str(getcwd())+''
         for i in request.POST:
             if i == 'ex_choice':
                 ex_choice = request.POST[i]
@@ -178,7 +179,7 @@ def run_rand(request):
         
         # j_dir = 'G:\\Study\\5th Sem\SPL\\run_randoop\\'
         
-        j_dir = str(getcwd())+''
+        
         compile_command = 'javac \"'+j_dir+'\\'+className+'.java\"'
         compile_status = system(compile_command)
 
