@@ -29,6 +29,15 @@ def run_rand(request):
         src_folder = request.POST['p_folder']
         className = src_file
         className = className[:-5]
+        ex_time = request.POST['ex_time']
+
+        ex_choice = ''
+        ml_choice = ''
+        for i in request.POST:
+            if i == 'ex_choice':
+                ex_choice = request.POST[i]
+            elif i == 'ml_choice':
+                ml_choice = request.POST[i]
 
         j_code = request.POST['j_code']
         if j_code != '':
@@ -63,7 +72,7 @@ def run_rand(request):
             # f1 = open('ErrorTest0.java', 'w+')
             # f1.close()
             # rand_command = 'java -cp "G:\Study\5th Sem\SPL\TestCube\testcube_pro\observer;G:\\Downloads\\randoop-4.3.0\\randoop\\randoop-all-4.3.0.jar" randoop.main.Main gentests --test-package="observer" --unchecked-exception="error" --time-limit=20'
-            p=0
+            # p=0
             # p = system(rand_command)
             # if p != 0:
             #     messages.error(request, '1. Something went wrong while executing randoop')
@@ -123,13 +132,7 @@ def run_rand(request):
         
 
         
-        ex_choice = ''
-        ml_choice = ''
-        for i in request.POST:
-            if i == 'ex_choice':
-                ex_choice = request.POST[i]
-            elif i == 'ml_choice':
-                ml_choice = request.POST[i]
+        
 
         # print(request.POST['ex_choice'])
         ex_file = request.POST['e_file']
@@ -169,7 +172,6 @@ def run_rand(request):
         f1.close()
         rand_command = 'java -cp "'+j_dir+';'+rand_dir+'" randoop.main.Main gentests --testclass="'+className+'"'+' --regression-test-basename='+'"'+className+'RegTester" --error-test-basename '+'"'+className+'ErrTester"'
         
-        ex_time = request.POST['ex_time']
         
         rand_command +=  ' --time-limit='+str(ex_time)
 
