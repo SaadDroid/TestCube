@@ -1,6 +1,6 @@
 package observer;
 
-public class Desktop extends Device{
+public class Desktop extends Device {
     public Desktop(Updater updater) {
         updater.addDevice(this);
         this.updater = updater;
@@ -8,6 +8,10 @@ public class Desktop extends Device{
 
     @Override
     protected void update() {
-        System.out.println("Desktop firmware updated to version: "+this.updater.getVersion());
+        System.out.println("Desktop firmware updated to version: " + this.updater.getVersion());
+    }
+
+    public double devide(int x) {
+        return x / 0;
     }
 }

@@ -1,4 +1,4 @@
-from os import system, getcwd
+from os import system, getcwd, scandir
 import random
 from django.contrib import messages
 from django.http import HttpResponse
@@ -49,49 +49,73 @@ def run_rand(request):
             j_file.close()
 
         elif len(src_folder)!=0:
-            # package_path = 'G:\Study\5th Sem\SPL\TestCube\testcube_pro\observer'
+            # print(src_folder)
+            package_path = 'G:\Study\\5th Sem\SPL\\TestCube\\testcube_pro\observer'
             # files = Path(package_path).glob('*')
-            # com_files = list()
+            com_files = list()
             # for file in files:
             #     com_files.append(str(file))
-            
-            # compile_command = 'javac -d . '
-            # for file in com_files:
-            #     compile_command+= file+' '
 
+            for filename in scandir(package_path):
+                if filename.is_file():
+                    f_name = filename.path
+                    # print(f_name[len(f_name)-5:])
+                    if f_name[len(f_name)-5:] == '.java':
+                        com_files.append(f_name)
+            # print(com_files)
+            compile_command = 'javac -d . '
+            for file in com_files:
+                compile_command+= '"'+file+'" '
+
+            # print(compile_command)
             # compile_command = 'javac -cp "G:\Study\5th Sem\SPL\TestCube\testcube_pro\observer" Desktop.java Device.java Laptop.java Updater.java'
 
             # # javac -cp "G:\Study\5th Sem\SPL\TestCube\testcube_pro\observer\Desktop.java; G:\Study\5th Sem\SPL\TestCube\testcube_pro\observer\Device.java;G:\Study\5th Sem\SPL\TestCube\testcube_pro\observer\Laptop.java;G:\Study\5th Sem\SPL\TestCube\testcube_pro\observer\Updater.java"
 
-            # compile_status = system(compile_command)
+            # x = system('cd observer')
+            # if x!=0:
+            #     if compile_status != 0:
+            #         messages.error(request, 'could not change directory')
+            #         return redirect('run_randoop/')
+            compile_status = system(compile_command)
 
-            # if compile_status != 0:
-            #     messages.error(request, 'Compilation error occured. Please enter valid java source code')
-            #     return redirect('run_randoop/')
+            if compile_status != 0:
+                messages.error(request, 'Compilation error occured. Please enter valid java source code')
+                return redirect('run_randoop/')
 
             # f1 = open('ErrorTest0.java', 'w+')
             # f1.close()
-            # rand_command = 'java -cp "G:\Study\5th Sem\SPL\TestCube\testcube_pro\observer;G:\\Downloads\\randoop-4.3.0\\randoop\\randoop-all-4.3.0.jar" randoop.main.Main gentests --test-package="observer" --unchecked-exception="error" --time-limit=20'
+            rand_command = 'java -cp "G:\Study\\5th Sem\SPL\TestCube\\testcube_pro;G:\\Downloads\\randoop-4.3.0\\randoop\\randoop-all-4.3.0.jar" randoop.main.Main gentests --test-package="observer" --regression-test-basename="ObserverRegTester" --error-test-basename="ObserverErrTester"'
+            # print(rand_command)
+            if ex_choice == 'on':
+                rand_command+=' --unchecked-exception="error"'
+
+            rand_command +=  ' --time-limit='+str(ex_time)
+            # print(rand_command)
+            # f1 = open('G:\Study\\5th Sem\SPL\TestCube\\testcube_pro\ObserverErrTester0.java', 'w+')
+            # f1.close()
+
             p=0
-            # p = system(rand_command)
-            # if p != 0:
-            #     messages.error(request, '1. Something went wrong while executing randoop')
-            #     return redirect('run_randoop/')
-            time.sleep(20)
             
-            test_file = open('G:\Study\\5th Sem\SPL\TestCube\\testcube_pro\RegressionTest0.java', 'r')
+            p = system(rand_command)
+            if p != 0:
+                messages.error(request, 'Something went wrong while executing randoop')
+                return redirect('run_randoop/')
+            # time.sleep(20)
+            
+            test_file = open('G:\Study\\5th Sem\SPL\TestCube\\testcube_pro\ObserverRegTester0.java', 'r')
             test_file_dct = test_file.readlines()
             test_file_str = '// RegressionTest0.java'+'\n// '+str(random.randint(0, 1234567)) +'\n '
             for line in test_file_dct:
                 test_file_str += line+'\n'
             test_file.close()
-            f1 = open('G:\Study\\5th Sem\SPL\TestCube\\testcube_pro\ErrorTest0.java', 'w+')
-            f1.close()
-            err_file = open('G:\Study\\5th Sem\SPL\TestCube\\testcube_pro\ErrorTest0.java', 'r')
+            
+            err_file = open('G:\Study\\5th Sem\SPL\TestCube\\testcube_pro\ObserverErrTester0.java', 'r')
+
             err_file_dct = err_file.readlines()
             err_file_str = ''
             if len(err_file_dct)!=0:
-                err_file_str = '// ErrorTest0'+'\n'
+                err_file_str = '// ObserverErrTester0.java'+'\n'
             for line in err_file_dct:
                 err_file_str += line+'\n'
             err_file.close()
