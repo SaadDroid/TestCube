@@ -72,7 +72,7 @@ def run_rand(request):
             # f1 = open('ErrorTest0.java', 'w+')
             # f1.close()
             # rand_command = 'java -cp "G:\Study\5th Sem\SPL\TestCube\testcube_pro\observer;G:\\Downloads\\randoop-4.3.0\\randoop\\randoop-all-4.3.0.jar" randoop.main.Main gentests --test-package="observer" --unchecked-exception="error" --time-limit=20'
-            # p=0
+            p=0
             # p = system(rand_command)
             # if p != 0:
             #     messages.error(request, '1. Something went wrong while executing randoop')
